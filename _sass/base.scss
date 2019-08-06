@@ -1,0 +1,206 @@
+@import 'colors.scss';
+
+$break-mobile: 512px;
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,700&display=swap');
+
+
+// Global styles
+// --------------------------------------------------
+
+html {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: $bg-color;
+  color: $text-color;
+
+  font-size: 16px;
+  font-family: Sans-Serif;
+  font-family: Fira Sans, Sans-Serif;
+
+  line-height: 1.5;
+
+  @media (max-width: $break-mobile) {
+    font-size: 12px;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 1rem 0 1rem 0;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+ul {
+  list-style: disc inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+pre {
+  font-size: 12px;
+  padding-left: 1em;
+  overflow-x: scroll;
+  z-index: 1;
+  font-family: 'Fira Code', monospace;
+}
+
+code {
+  padding: 0 0.25em;
+  color: fade-out($text-color, 0.3);
+}
+
+
+// Sectioning
+// --------------------------------------------------
+
+header {
+  &[data-tall-header="true"] {
+    height: 100%;
+    width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 2rem;
+}
+
+main {
+  min-height: 80%;
+  max-width: 50rem;
+  padding: 2rem 4rem;
+  margin: 0 auto;
+
+  @media (max-width: $break-mobile) {
+    padding: 1rem;
+  }
+}
+
+nav, section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin: 4rem;
+}
+
+small {
+  font-size: 0.85rem;
+}
+
+
+// Post Archive
+// --------------------------------------------------
+
+.post-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  margin-bottom: 0;
+
+  @media (max-width: $break-mobile) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
+
+.post-year {
+  flex: 1;
+  margin: 0 1rem 0 0;
+}
+
+.post-list {
+  width: 100%;
+  flex: 5;
+}
+
+.post-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-bottom: 1px dashed $text-color;
+  padding: 0.5rem 0;
+}
+
+.post-link {
+  flex: 3;
+}
+
+.post-date {
+  flex: 1;
+  text-align: right;
+}
+
+
+// Custom components
+// --------------------------------------------------
+
+// A list drawn in a single line with '·' as a separator.
+.inline-list {
+  list-style-type: none;
+  &> li {
+    display: inline-block;
+    &::after { content: ' · '; }
+    &:last-child::after { content: ''; }
+  }
+}
+
+// A link that is only colored on hover.
+.quiet-link {
+  color: $text-color;
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+// The container around an SVG icon. This should be an `<a>` with a link.
+.icon {
+  fill: $text-color;
+  display: inline-block;
+  vertical-align: text-top;
+  &:hover { fill: $primary-color };
+  &> svg { height: 1em; width: 1em; }
+}
+
+// Anything that shouldn't be displayed.
+.hidden {
+  display: none;
+}

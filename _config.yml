@@ -1,0 +1,88 @@
+## Global site settings.
+
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, you should restart the server
+# process. If you find yourself editing this file very often, consider using
+# Jekyll's data files feature instead.
+#
+# These variables can be accessed by templates, e.g. ``{{ site.myvariable }}``.
+
+
+## General metadata
+title: Chris Barrick
+email: cbarrick1@gmail.com
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+timezone: America/New_York
+encoding: utf-8
+permalink: /:title
+lang: en_US
+author: csb  # See _data/authors.yml
+
+
+## Cannonical URL
+url: "https://cbarrick.github.io"
+baseurl: ""
+
+
+## Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+
+## Plugins
+# Github Pages only supports plugins on their whitelist.
+# <https://pages.github.com/versions/>
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+
+## SEO
+# Requires the `jekyll-seo-tag` plugin.
+# <https://github.com/jekyll/jekyll-seo-tag>
+social:
+  name: Chris Barrick
+  links:
+    - https://github.com/cbarrick
+    - https://www.linkedin.com/in/csb1024/
+    - https://twitter.com/cbarrick1024
+    - https://www.facebook.com/chris.barrick1024
+twitter:
+  username: cbarrick1024
+  card: summary
+webmaster_verifications:
+  google: W4TaAXnMBUryBO_-3cRLRqCHaXuk72rXMbzCOfnOvUI  # https://search.google.com/search-console
+  # bing: 1234
+  # alexa: 1234
+  # yandex: 1234
+  # baidu: 1234
+
+
+## Collections
+# Technically, the "posts" collection is setup by default.
+# We reset it here for the sake of being explicit.
+collections:
+  posts:
+    output: true
+
+
+## Front matter defaults
+# Set default frontmatter metadata using these rules.
+# <https://jekyllrb.com/docs/configuration/front-matter-defaults/>
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      permalink: /posts/:year/:month/:day/:title
+      layout: post

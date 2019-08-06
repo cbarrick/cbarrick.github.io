@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<article>
+  <time datetime='{{ page.date | date_to_xmlschema }}'>{{ page.date | date_to_string: 'ordinal', 'US' }}</time>
+  <h2>{{ page.title }}</h2>
+  {{ content }}
+</article>

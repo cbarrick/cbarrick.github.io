@@ -1,0 +1,5 @@
+# editorconfig.org
+
+[*.{html,xml,svg,yml,css,scss}]
+indent_size = 2
+indent_style = space

@@ -1,0 +1,38 @@
+---
+title: Chris Barrick
+layout: default
+tall_header: true
+---
+
+<section id='about'>
+  <h2>About</h2>
+  <p>Hi. It me. Chris.</p>
+  <p>This website is totally WIP. None of it matters and everything is a lie.</p>
+</section>
+
+<nav id='posts'>
+  <h2>Posts</h2>
+  {% assign postsByYear = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+  {% for group in postsByYear %}
+    {% assign year = group.name %}
+    {% assign posts = group.items %}
+    <section class='post-group'>
+      <h3 class='post-year'>{{ year }}</h3>
+      <ul class='post-list'>
+        {% for post in posts %}
+          <li class='post-list-item'>
+            <a href='{{ post.url }}' class='post-link'>{{ post.title }}</a>
+            <time class='post-date' datetime='{{ post.date | date_to_xmlschema }}'>{{ post.date | date: '%b %d' }}</time>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</nav>
+
+<nav id='projects'>
+  <h2>Projects</h2>
+  <ul>
+    <li>Foobar</li>
+  </ul>
+</nav>
