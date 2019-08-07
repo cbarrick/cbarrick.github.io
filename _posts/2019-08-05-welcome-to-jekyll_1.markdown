@@ -1,6 +1,7 @@
 ---
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Jekyll! This post has a really really really really really really really looong title."
 date:   2019-08-05 11:15:27 -0400
+robots: disallow
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

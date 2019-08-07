@@ -34,23 +34,43 @@ body {
 h1 {
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 h2 {
   font-size: 3rem;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 h3 {
   font-size: 2rem;
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 1rem 0;
 }
 
 p {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
 }
 
 a {
@@ -61,22 +81,28 @@ a {
 
 ul {
   list-style: disc inside;
+  padding-inline-start: 2.5rem;
 }
 
 ol {
   list-style: decimal inside;
+  padding-inline-start: 2.5rem;
 }
 
 pre {
-  font-size: 12px;
-  padding-left: 1em;
+  font-size: 0.75rem;
+  padding-left: 1rem;
   overflow-x: scroll;
   z-index: 1;
   font-family: 'Fira Code', monospace;
+
+  @media (max-width: $break-mobile) {
+    font-size: 1rem;
+  }
 }
 
 code {
-  padding: 0 0.25em;
+  padding: 0 0.25rem;
   color: fade-out($text-color, 0.3);
 }
 
@@ -85,11 +111,6 @@ code {
 // --------------------------------------------------
 
 header {
-  &[data-tall-header="true"] {
-    height: 100%;
-    width: 100%;
-  }
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,61 +145,87 @@ small {
 }
 
 
-// Post Archive
+// Sectioned Nav
 // --------------------------------------------------
+// A sectioned nav is a <nav> with multiple sections and is drawn with a
+// flexbox table design. It is used for the post archive.
+//
+// - The first child of a sectioned nav should be an <h2> giving the nav's
+//   title, and all other children should be <section>s.
+//
+// - Each section should contain two children: an <h3> giving the section title
+//   and a <ul> listing the navigations of that section.
+//
+// - The navigation entries are <li>s. Their first child should be the link
+//   and all other children are drawn in columns to the right (e.g. timestamps).
+//
+// You only need to add the `sectioned-nav` class to the outer nav. The rest
+// is automatic.
 
-.post-group {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+.sectioned-nav {
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 
-  margin-bottom: 0;
+    margin-bottom: 0;
 
-  @media (max-width: $break-mobile) {
-    flex-direction: column;
-    margin-bottom: 1rem;
+    @media (max-width: $break-mobile) {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  }
+
+  h3 {
+    flex: 1;
+    margin: 0;
+
+    // We want the section title to be the same height as a single item.
+    // The title has no padding, hence the larger font. This formula assumes
+    // a line-height of 1.5 and a total vertical padding of 1rem per item.
+    font-size: calc(1rem + (1rem / 1.5));
+  }
+
+  ul {
+    width: 100%;
+    flex: 6;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-bottom: 1px dashed $text-color;
+    padding: 0.5rem 0;
+
+    &> :first-child {
+      flex: 5;
+    }
+
+    &> :not(:first-child) {
+      flex: 1;
+      text-align: right;
+    }
   }
 }
 
-.post-year {
-  flex: 1;
-  margin: 0 1rem 0 0;
-}
 
-.post-list {
-  width: 100%;
-  flex: 5;
-}
-
-.post-list-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  border-bottom: 1px dashed $text-color;
-  padding: 0.5rem 0;
-}
-
-.post-link {
-  flex: 3;
-}
-
-.post-date {
-  flex: 1;
-  text-align: right;
-}
-
-
-// Custom components
+// Small Components
 // --------------------------------------------------
 
 // A list drawn in a single line with '·' as a separator.
 .inline-list {
+  display: inline-flex;
   list-style-type: none;
+  padding: 0;
   &> li {
     display: inline-block;
-    &::after { content: ' · '; }
-    &:last-child::after { content: ''; }
+    &:not(:last-child)::after {
+      content: '·';
+      margin: 0 0.5rem;
+    }
   }
 }
 
@@ -197,10 +244,15 @@ small {
   display: inline-block;
   vertical-align: text-top;
   &:hover { fill: $primary-color };
-  &> svg { height: 1em; width: 1em; }
 }
 
 // Anything that shouldn't be displayed.
 .hidden {
   display: none;
+}
+
+// Stretched to fill the viewport.
+.full-screen {
+  height: 100%;
+  width: 100%;
 }

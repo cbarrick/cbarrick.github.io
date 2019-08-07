@@ -10,7 +10,7 @@ tall_header: true
   <p>This website is totally WIP. None of it matters and everything is a lie.</p>
 </section>
 
-<nav id='posts'>
+<nav id='posts' class='sectioned-nav'>
   <h2>Posts</h2>
   {% assign postsByYear = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
   {% for group in postsByYear %}

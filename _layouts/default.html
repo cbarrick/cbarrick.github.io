@@ -17,15 +17,15 @@
 
   <body>
 
-    <header data-tall-header='{{ page.tall_header | default: "false" }}'>
-      <h1><a class='quiet-link' href='/'>{{ site.title }}</a></h1>
+    <header class='{{ page.tall_header | replace: "true", "full-screen" }}'>
+      <h1><a class='quiet-link' href='{{ site.baseurl }}/'>{{ site.title }}</a></h1>
       <nav id='main-nav'>
         <h2 class='hidden'>Site Navigation</h2>
         <ul id='nav-list' class='inline-list'>
-          <li><a class='quiet-link' href='/#about'>About</a></li>
-          <li><a class='quiet-link' href='/#posts'>Posts</a></li>
-          <li><a class='quiet-link' href='/#projects'>Projects</a></li>
-          <li><a class='icon' href='/feed.xml'>{% include octicons/rss.svg %}</a></li>
+          <li><a class='quiet-link' href='{{ site.baseurl }}/#about'>About</a></li>
+          <li><a class='quiet-link' href='{{ site.baseurl }}/#posts'>Posts</a></li>
+          <li><a class='quiet-link' href='{{ site.baseurl }}/#projects'>Projects</a></li>
+          <li><a class='icon' href='{{ site.baseurl }}/feed.xml'>{% include octicons/rss.svg %}</a></li>
         </ul>
       </nav>
     </header>
