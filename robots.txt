@@ -1,3 +1,12 @@
 ---
 ---
+User-agent: *
 Sitemap: {{ site.url }}/sitemap.xml
+{%- assign all_pages = site.pages | concat: site.documents -%}
+{%- for page in all_pages -%}
+{%- if page.robots == 'disallow' -%}
+{% comment %}This comment forces a newline{% endcomment %}
+Disallow: {{ page.url }}
+Disallow: {{ page.url }}.html
+{%- endif -%}
+{%- endfor -%}
