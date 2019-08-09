@@ -18,7 +18,7 @@ description: >-
 timezone: America/New_York
 encoding: utf-8
 permalink: /:title
-lang: en_US
+lang: en-US
 author: csb  # See _data/authors.yml
 
 
