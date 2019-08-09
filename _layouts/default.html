@@ -1,5 +1,9 @@
 ---
-layout: compress
+# The compress layout causes HTML minification.
+# It currently has problems with nested <pre>s which breaks codeblocks when
+# line numbering is enabled.
+# https://github.com/penibelst/jekyll-compress-html/issues/71
+#layout: compress
 ---
 <!doctype html>
 <html lang='{{ page.lang | default: site.lang }}'>
@@ -10,11 +14,12 @@ layout: compress
 
     <title>{{ page.title }}</title>
 
-    <link rel='stylesheet' href='/style.css'>
+    <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/style.css'>
+    <link rel='sitemap' type='application/xml' href='{{ site.baseurl }}/sitemap.css'>
+    {% feed_meta %}{% comment %}Adds a <link> for the atom feed.{% endcomment %}
     <link rel='license' href='https://creativecommons.org/licenses/by/4.0/'>
     <!-- A link with rel='license' is also set in the footer. Keep these in sync. -->
 
-    {% feed_meta %}
     {% seo title=false %}
   </head>
 
