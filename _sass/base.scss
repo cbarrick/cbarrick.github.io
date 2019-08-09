@@ -6,8 +6,8 @@ $break-mobile: 512px;
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,700&display=swap');
 
 
-// Global styles
-// --------------------------------------------------
+// Common Elements
+// ---------------------------------------------------------------------------
 
 html {
   height: 100vh;
@@ -74,19 +74,31 @@ p {
 }
 
 a {
-  color: $primary-color;
+  color: $link-color;
   text-decoration: none;
-  &:hover { text-decoration: underline; }
+  svg { fill: $link-color; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-ul {
-  list-style: disc inside;
+ul, ol {
   padding-inline-start: 2.5rem;
 }
+ul { list-style: disc inside; }
+ol { list-style: decimal inside; }
 
-ol {
-  list-style: decimal inside;
-  padding-inline-start: 2.5rem;
+dl {
+  // TODO
+}
+
+blockquote {
+  border-left: 4px solid $text-color;
+  padding-left: 1rem;
+}
+
+cite {
+  font-style: italic;
 }
 
 pre {
@@ -101,14 +113,50 @@ pre {
   }
 }
 
-code {
+code, kbd, samp {
   padding: 0 0.25rem;
-  color: fade-out($text-color, 0.3);
+  color: $base05;
+}
+
+mark {
+  background-color: $mark-color;
+}
+
+big {
+  font-size: 1.15rem;
+}
+
+small {
+  font-size: 0.85rem;
+}
+
+hr {
+  width: 80%;
+  margin: 2rem auto;
+  border: none;  // Reset the user-agent.
+  border-bottom: 1px solid $text-color;
+}
+
+svg {
+  height: 100%;
+  width: auto;
+}
+
+figure {
+  text-align: center;
+}
+
+canvas, video, audio, iframe {
+  width: 100%;
+}
+
+meter, progress {
+  width: 100%;
 }
 
 
 // Sectioning
-// --------------------------------------------------
+// ---------------------------------------------------------------------------
 
 header {
   display: flex;
@@ -116,7 +164,6 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-
   padding: 2rem;
 }
 
@@ -140,24 +187,66 @@ footer {
   margin: 4rem;
 }
 
-small {
-  font-size: 0.85rem;
+
+// Tables
+// ---------------------------------------------------------------------------
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  margin: 0.5rem;
+}
+
+thead, tfoot {
+  color: $bg-color;
+  background-color: $text-color;
+}
+
+thead {
+  &> tr > th:first-child { border-radius: 12px 0 0 0; }
+  &> tr > th:last-child { border-radius: 0 12px 0 0; }
+}
+
+tfoot {
+  &> tr > th:first-child { border-radius: 0 0 0 12px; }
+  &> tr > th:last-child { border-radius: 0 0 12px 0; }
+}
+
+th, td {
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+  background-color: darken($bg-color, 10%);
+}
+
+tr:nth-child(odd) {
+  // Don't style odd rows. This effects code blocks with line numbers.
 }
 
 
+// Forms
+// ---------------------------------------------------------------------------
+// TODO
+
+
 // Sectioned Nav
-// --------------------------------------------------
+// ---------------------------------------------------------------------------
 // A sectioned nav is a <nav> with multiple sections and is drawn with a
 // flexbox table design. It is used for the post archive.
 //
-// - The first child of a sectioned nav should be an <h2> giving the nav's
-//   title, and all other children should be <section>s.
+// - The first child of a sectioned nav should be the nav heading (e.g. <h2>),
+//   and all other children should be <section>s.
 //
-// - Each section should contain two children: an <h3> giving the section title
-//   and a <ul> listing the navigations of that section.
+// - Each section should contain two children. The first child should be the
+//   section heading (e.g. <h3>), and the second child should be a <ul> listing
+//   the navigation items.
 //
-// - The navigation entries are <li>s. Their first child should be the link
-//   and all other children are drawn in columns to the right (e.g. timestamps).
+// - The navigation items are <li>s with at least one child. The first child
+//   should be the navigation link, and all other children are metadata (e.g.
+//   timestamps) to be drawn in columns to the right.
 //
 // You only need to add the `sectioned-nav` class to the outer nav. The rest
 // is automatic.
@@ -174,16 +263,16 @@ small {
       flex-direction: column;
       margin-bottom: 1rem;
     }
-  }
 
-  h3 {
-    flex: 1;
-    margin: 0;
+    &> :first-child {
+      flex: 1;
+      margin: 0;
 
-    // We want the section title to be the same height as a single item.
-    // The title has no padding, hence the larger font. This formula assumes
-    // a line-height of 1.5 and a total vertical padding of 1rem per item.
-    font-size: calc(1rem + (1rem / 1.5));
+      // We want the section title to be the same height as a single item.
+      // The title has no padding, hence the larger font. This formula assumes
+      // a line-height of 1.5 and a total vertical padding of 1rem per item.
+      font-size: calc(1rem + (1rem / 1.5));
+    }
   }
 
   ul {
@@ -213,7 +302,7 @@ small {
 
 
 // Small Components
-// --------------------------------------------------
+// ---------------------------------------------------------------------------
 
 // A list drawn in a single line with '·' as a separator.
 .inline-list {
@@ -231,10 +320,13 @@ small {
 
 // A link that is only colored on hover.
 .quiet-link {
+  text-decoration: none;
   color: $text-color;
+  svg { fill: $text-color; }
   &:hover {
-    color: $primary-color;
     text-decoration: none;
+    color: $link-color;
+    svg { fill: $link-color; }
   }
 }
 
@@ -243,7 +335,7 @@ small {
   fill: $text-color;
   display: inline-block;
   vertical-align: text-top;
-  &:hover { fill: $primary-color };
+  height: 1em;
 }
 
 // Anything that shouldn't be displayed.
