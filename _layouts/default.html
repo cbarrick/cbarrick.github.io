@@ -38,16 +38,14 @@ layout: compress
     </main>
 
     <footer>
-      <small>
-        <ul class='inline-list'>
-          {% assign copydate = page.date | default: site.time %}
-          {% assign copydate_iso = copydate | date_to_xmlschema %}
-          {% assign copydate_year = copydate | date: '%Y' %}
-          <li>&copy; <time datetime='{{ copydate_iso }}'>{{ copydate_year }}</time> {{ site.title }}</li>
-          <li><a class='quiet-link' rel='license' href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a></li>
-          <!-- A link with rel='license' is also set in the head. Keep these in sync. -->
-        </ul>
-      </small>
+      <ul class='inline-list'>
+        {% assign copydate = page.date | default: site.time %}
+        {% assign copydate_iso = copydate | date_to_xmlschema %}
+        {% assign copydate_year = copydate | date: '%Y' %}
+        <li><small>&copy; <time datetime='{{ copydate_iso }}'>{{ copydate_year }}</time> {{ site.title }}</small></li>
+        <li><small><a class='quiet-link' rel='license' href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a></small></li>
+        <!-- A link with rel='license' is also set in the head. Keep these in sync. -->
+      </ul>
     </footer>
 
   </body>
