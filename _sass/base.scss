@@ -267,11 +267,7 @@ tr:nth-child(odd) {
     &> :first-child {
       flex: 1;
       margin: 0;
-
-      // We want the section title to be the same height as a single item.
-      // The title has no padding, hence the larger font. This formula assumes
-      // a line-height of 1.5 and a total vertical padding of 1rem per item.
-      font-size: calc(1rem + (1rem / 1.5));
+      font-size: 1.7rem;
     }
   }
 
