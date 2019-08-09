@@ -21,7 +21,10 @@ tall_header: true
       <ul class='post-list'>
         {% for post in posts %}
           <li class='post-list-item'>
-            <a href='{{ post.url }}' class='post-link'>{{ post.title }}</a>
+            <a href='{{ post.url }}' class='post-link'>
+              {{ post.title }}
+            </a>
+            {% if post.path contains '_drafts' %}<small>[draft]</small>{% endif %}
             <time class='post-date' datetime='{{ post.date | date_to_xmlschema }}'>{{ post.date | date: '%b %d' }}</time>
           </li>
         {% endfor %}
