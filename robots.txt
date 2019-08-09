@@ -1,7 +1,9 @@
 ---
 ---
-User-agent: *
 Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: {{ site.url }}/feed.xml
+
+User-agent: *
 {%- assign all_pages = site.pages | concat: site.documents -%}
 {%- for page in all_pages -%}
 {%- if page.robots == 'disallow' -%}
