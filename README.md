@@ -59,8 +59,10 @@ License & Acknowledgements
 
 The contents of this website are licensed under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license (CC-BY-4.0).
 
-This site uses [minireset.css](https://github.com/jgthms/minireset.css) which is copyright Jeremy Thomas and released under the [MIT license](https://github.com/jgthms/minireset.css/blob/master/LICENSE).
+This site uses [minireset.css](https://github.com/jgthms/minireset.css) as a CSS reset. It is copyright Jeremy Thomas and released under the [MIT license](https://github.com/jgthms/minireset.css/blob/master/LICENSE).
 
-This site includes the [Octicons](https://github.com/primer/octicons/) which are copyright GitHub Inc.
+This site includes the [Octicons](https://github.com/primer/octicons/). They are copyright GitHub Inc.
 
 This site uses the [Fira](http://mozilla.github.io/Fira/) suite of fonts and the [Fira Code](https://github.com/tonsky/FiraCode) derivative font, which are copyright The Mozilla Foundation and The Fira Code Project Authors respectively. All fonts are licensed under the [SIL Open Font License](https://scripts.sil.org/OFL), Version 1.1.
+
+This site uses the [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) layout to minify the HTML. It is copyright Anatol Broder and released under the [MIT license](https://github.com/penibelst/jekyll-compress-html/blob/master/LICENSE).

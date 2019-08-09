@@ -6,71 +6,71 @@
 // <https://github.com/chriskempson/base16>.
 
 .highlight { background-color: $base00; color: $base05 }
-.highlight .c { color: $base02 } /* Comment */
-.highlight .err { color: $base05 } /* Error */
-.highlight .g { color: $base05 } /* Generic */
-.highlight .k { color: $base0B } /* Keyword */
-.highlight .l { color: $base05 } /* Literal */
-.highlight .n { color: $base05 } /* Name */
-.highlight .o { color: $base0B } /* Operator */
-.highlight .x { color: $base09 } /* Other */
-.highlight .p { color: $base05 } /* Punctuation */
-.highlight .cm { color: $base02 } /* Comment.Multiline */
-.highlight .cp { color: $base0B } /* Comment.Preproc */
-.highlight .c1 { color: $base02 } /* Comment.Single */
-.highlight .cs { color: $base0B } /* Comment.Special */
-.highlight .gd { color: $base0C } /* Generic.Deleted */
-.highlight .ge { color: $base05; font-style: italic } /* Generic.Emph */
-.highlight .gr { color: $base08 } /* Generic.Error */
-.highlight .gh { color: $base09 } /* Generic.Heading */
-.highlight .gi { color: $base0B } /* Generic.Inserted */
-.highlight .go { color: $base05 } /* Generic.Output */
-.highlight .gp { color: $base05 } /* Generic.Prompt */
-.highlight .gs { color: $base05; font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: $base09 } /* Generic.Subheading */
-.highlight .gt { color: $base05 } /* Generic.Traceback */
-.highlight .kc { color: $base09 } /* Keyword.Constant */
-.highlight .kd { color: $base0D } /* Keyword.Declaration */
-.highlight .kn { color: $base0B } /* Keyword.Namespace */
-.highlight .kp { color: $base0B } /* Keyword.Pseudo */
-.highlight .kr { color: $base0D } /* Keyword.Reserved */
-.highlight .kt { color: $base08 } /* Keyword.Type */
-.highlight .ld { color: $base05 } /* Literal.Date */
-.highlight .m { color: $base0C } /* Literal.Number */
-.highlight .s { color: $base0C } /* Literal.String */
-.highlight .na { color: $base05 } /* Name.Attribute */
-.highlight .nb { color: $base0A } /* Name.Builtin */
-.highlight .nc { color: $base0D } /* Name.Class */
-.highlight .no { color: $base09 } /* Name.Constant */
-.highlight .nd { color: $base0D } /* Name.Decorator */
-.highlight .ni { color: $base09 } /* Name.Entity */
-.highlight .ne { color: $base09 } /* Name.Exception */
-.highlight .nf { color: $base0D } /* Name.Function */
-.highlight .nl { color: $base05 } /* Name.Label */
-.highlight .nn { color: $base05 } /* Name.Namespace */
-.highlight .nx { color: $base05 } /* Name.Other */
-.highlight .py { color: $base05 } /* Name.Property */
-.highlight .nt { color: $base0D } /* Name.Tag */
-.highlight .nv { color: $base0D } /* Name.Variable */
-.highlight .ow { color: $base0B } /* Operator.Word */
-.highlight .w { color: $base05 } /* Text.Whitespace */
-.highlight .mf { color: $base0C } /* Literal.Number.Float */
-.highlight .mh { color: $base0C } /* Literal.Number.Hex */
-.highlight .mi { color: $base0C } /* Literal.Number.Integer */
-.highlight .mo { color: $base0C } /* Literal.Number.Oct */
-.highlight .sb { color: $base02 } /* Literal.String.Backtick */
-.highlight .sc { color: $base0C } /* Literal.String.Char */
-.highlight .sd { color: $base05 } /* Literal.String.Doc */
-.highlight .s2 { color: $base0C } /* Literal.String.Double */
-.highlight .se { color: $base09 } /* Literal.String.Escape */
-.highlight .sh { color: $base05 } /* Literal.String.Heredoc */
-.highlight .si { color: $base0C } /* Literal.String.Interpol */
-.highlight .sx { color: $base0C } /* Literal.String.Other */
-.highlight .sr { color: $base08 } /* Literal.String.Regex */
-.highlight .s1 { color: $base0C } /* Literal.String.Single */
-.highlight .ss { color: $base0C } /* Literal.String.Symbol */
-.highlight .bp { color: $base0D } /* Name.Builtin.Pseudo */
-.highlight .vc { color: $base0D } /* Name.Variable.Class */
-.highlight .vg { color: $base0D } /* Name.Variable.Global */
-.highlight .vi { color: $base0D } /* Name.Variable.Instance */
-.highlight .il { color: $base0C } /* Literal.Number.Integer.Long */
+.highlight .c { color: $base02 } // Comment
+.highlight .err { color: $base05 } // Error
+.highlight .g { color: $base05 } // Generic
+.highlight .k { color: $base0B } // Keyword
+.highlight .l { color: $base05 } // Literal
+.highlight .n { color: $base05 } // Name
+.highlight .o { color: $base0B } // Operator
+.highlight .x { color: $base09 } // Other
+.highlight .p { color: $base05 } // Punctuation
+.highlight .cm { color: $base02 } // Comment.Multiline
+.highlight .cp { color: $base0B } // Comment.Preproc
+.highlight .c1 { color: $base02 } // Comment.Single
+.highlight .cs { color: $base0B } // Comment.Special
+.highlight .gd { color: $base0C } // Generic.Deleted
+.highlight .ge { color: $base05; font-style: italic } // Generic.Emph
+.highlight .gr { color: $base08 } // Generic.Error
+.highlight .gh { color: $base09 } // Generic.Heading
+.highlight .gi { color: $base0B } // Generic.Inserted
+.highlight .go { color: $base05 } // Generic.Output
+.highlight .gp { color: $base05 } // Generic.Prompt
+.highlight .gs { color: $base05; font-weight: bold } // Generic.Strong
+.highlight .gu { color: $base09 } // Generic.Subheading
+.highlight .gt { color: $base05 } // Generic.Traceback
+.highlight .kc { color: $base09 } // Keyword.Constant
+.highlight .kd { color: $base0D } // Keyword.Declaration
+.highlight .kn { color: $base0B } // Keyword.Namespace
+.highlight .kp { color: $base0B } // Keyword.Pseudo
+.highlight .kr { color: $base0D } // Keyword.Reserved
+.highlight .kt { color: $base08 } // Keyword.Type
+.highlight .ld { color: $base05 } // Literal.Date
+.highlight .m { color: $base0C } // Literal.Number
+.highlight .s { color: $base0C } // Literal.String
+.highlight .na { color: $base05 } // Name.Attribute
+.highlight .nb { color: $base0A } // Name.Builtin
+.highlight .nc { color: $base0D } // Name.Class
+.highlight .no { color: $base09 } // Name.Constant
+.highlight .nd { color: $base0D } // Name.Decorator
+.highlight .ni { color: $base09 } // Name.Entity
+.highlight .ne { color: $base09 } // Name.Exception
+.highlight .nf { color: $base0D } // Name.Function
+.highlight .nl { color: $base05 } // Name.Label
+.highlight .nn { color: $base05 } // Name.Namespace
+.highlight .nx { color: $base05 } // Name.Other
+.highlight .py { color: $base05 } // Name.Property
+.highlight .nt { color: $base0D } // Name.Tag
+.highlight .nv { color: $base0D } // Name.Variable
+.highlight .ow { color: $base0B } // Operator.Word
+.highlight .w { color: $base05 } // Text.Whitespace
+.highlight .mf { color: $base0C } // Literal.Number.Float
+.highlight .mh { color: $base0C } // Literal.Number.Hex
+.highlight .mi { color: $base0C } // Literal.Number.Integer
+.highlight .mo { color: $base0C } // Literal.Number.Oct
+.highlight .sb { color: $base02 } // Literal.String.Backtick
+.highlight .sc { color: $base0C } // Literal.String.Char
+.highlight .sd { color: $base05 } // Literal.String.Doc
+.highlight .s2 { color: $base0C } // Literal.String.Double
+.highlight .se { color: $base09 } // Literal.String.Escape
+.highlight .sh { color: $base05 } // Literal.String.Heredoc
+.highlight .si { color: $base0C } // Literal.String.Interpol
+.highlight .sx { color: $base0C } // Literal.String.Other
+.highlight .sr { color: $base08 } // Literal.String.Regex
+.highlight .s1 { color: $base0C } // Literal.String.Single
+.highlight .ss { color: $base0C } // Literal.String.Symbol
+.highlight .bp { color: $base0D } // Name.Builtin.Pseudo
+.highlight .vc { color: $base0D } // Name.Variable.Class
+.highlight .vg { color: $base0D } // Name.Variable.Global
+.highlight .vi { color: $base0D } // Name.Variable.Instance
+.highlight .il { color: $base0C } // Literal.Number.Integer.Long
