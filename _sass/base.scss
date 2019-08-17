@@ -34,7 +34,6 @@ body {
 h1 {
   font-size: 4rem;
   font-weight: bold;
-  margin: 1rem 0;
 }
 
 h2 {
@@ -165,6 +164,10 @@ header {
   justify-content: center;
   text-align: center;
   padding: 2rem;
+
+  nav {
+    margin: 0.25rem;
+  }
 }
 
 main {
