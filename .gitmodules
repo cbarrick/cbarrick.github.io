@@ -1,3 +1,9 @@
 [submodule "minireset.css"]
 	path = _sass/minireset
 	url = https://github.com/jgthms/minireset.css.git
+[submodule "material-design-icons"]
+	path = _includes/material-design-icons
+	url = https://github.com/google/material-design-icons.git
+[submodule "simple-icons"]
+	path = _includes/simple-icons
+	url = https://github.com/simple-icons/simple-icons.git

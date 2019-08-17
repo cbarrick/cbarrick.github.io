@@ -61,8 +61,10 @@ The contents of this website are licensed under the [Creative Commons Attributio
 
 This site uses [minireset.css](https://github.com/jgthms/minireset.css) as a CSS reset. It is copyright Jeremy Thomas and released under the [MIT license](https://github.com/jgthms/minireset.css/blob/master/LICENSE).
 
-This site includes the [Octicons](https://github.com/primer/octicons/). They are copyright GitHub Inc.
+This site uses the [Material Design icons](http://google.github.io/material-design-icons/) for common UI/UX icons, which are copyright Google and released under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-This site uses the [Fira](http://mozilla.github.io/Fira/) suite of fonts and the [Fira Code](https://github.com/tonsky/FiraCode) derivative font, which are copyright The Mozilla Foundation and The Fira Code Project Authors respectively. All fonts are licensed under the [SIL Open Font License](https://scripts.sil.org/OFL), Version 1.1.
+This site uses the [Simple Icons](https://simpleicons.org/) for SVG icons of popular brands. Each icon is a trademark their respective company.
+
+This site uses the [Fira](http://mozilla.github.io/Fira/) suite of fonts and the [Fira Code](https://github.com/tonsky/FiraCode) derivative font, which are copyright The Mozilla Foundation and The Fira Code Project Authors respectively. All fonts are licensed under the [SIL Open Font License, Version 1.1](https://scripts.sil.org/OFL).
 
 This site uses the [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) layout to minify the HTML. It is copyright Anatol Broder and released under the [MIT license](https://github.com/penibelst/jekyll-compress-html/blob/master/LICENSE).
