@@ -52,19 +52,20 @@ List the desired plugins in `_config.yml` under the `plugins` section.
 Jekyll allows you to register plugins directly in the Gemfile by placing them under a group called `:jekyll_plugins`, and the official Jekyll docs advise this method. However, the Gemfile is ignored by GitHub Pages, so we must use the `_config.yml` method instead.
 
 
-License & Acknowledgements
+Acknowledgements
+-------------------------
+
+- [minireset.css](https://github.com/jgthms/minireset.css) - Jeremy Thomas - [MIT](https://github.com/jgthms/minireset.css/blob/master/LICENSE)
+- [Material Design icons](http://google.github.io/material-design-icons/) - Google - [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)
+- [Simple Icons](https://simpleicons.org/) - Each icon is a trademark their respective company
+- [Fira Sans & Fira Mono](http://mozilla.github.io/Fira/) - Mozilla - [OFL 1.1](https://github.com/mozilla/Fira/blob/master/LICENSE)
+- [Fira Code](https://github.com/tonsky/FiraCode) - The Fira Code Project Authors - [OFL 1.1](https://github.com/tonsky/FiraCode/blob/master/LICENSE)
+- [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) - Anatol Broder - [MIT](https://github.com/penibelst/jekyll-compress-html/blob/master/LICENSE)
+
+
+License
 -------------------------
 
 © Copyright 2019 Chris Barrick
 
 The contents of this website are licensed under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license (CC-BY-4.0).
-
-This site uses [minireset.css](https://github.com/jgthms/minireset.css) as a CSS reset. It is copyright Jeremy Thomas and released under the [MIT license](https://github.com/jgthms/minireset.css/blob/master/LICENSE).
-
-This site uses the [Material Design icons](http://google.github.io/material-design-icons/) for common UI/UX icons, which are copyright Google and released under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
-
-This site uses the [Simple Icons](https://simpleicons.org/) for SVG icons of popular brands. Each icon is a trademark their respective company.
-
-This site uses the [Fira](http://mozilla.github.io/Fira/) suite of fonts and the [Fira Code](https://github.com/tonsky/FiraCode) derivative font, which are copyright The Mozilla Foundation and The Fira Code Project Authors respectively. All fonts are licensed under the [SIL Open Font License, Version 1.1](https://scripts.sil.org/OFL).
-
-This site uses the [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) layout to minify the HTML. It is copyright Anatol Broder and released under the [MIT license](https://github.com/penibelst/jekyll-compress-html/blob/master/LICENSE).
