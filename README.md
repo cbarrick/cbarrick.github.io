@@ -6,21 +6,20 @@ The source code of my personal website, built with Jekyll and hosted on GitHub P
 Building
 -------------------------
 
-The site is built with Jekyll, a static site generator in Ruby. I try to support the Ruby versions from Homebrew (macOS), Debian, and GitHub Pages, but I make not guarantees. Both Jekyll and Ruby a pretty stable these days, so this will probably work in other distributions.
+The site is built with Jekyll, a static site generator in Ruby. I try to support the Ruby versions from Homebrew (macOS), Debian, and GitHub Pages, but I make no guarantees. Both Jekyll and Ruby are pretty stable these days, so this will probably work in other distributions.
 
 ```shell
-# Get Ruby. For macOS, just use the version in Homebrew.
+# Get Ruby. For macOS, use the version in Homebrew.
 $ brew install ruby
 
-# Install the bundler gem for robust dependency management.
+# Install the bundler gem for environment and dependency management.
 $ gem install bundler
 
 # Use bundler to install the dependencies, including Jekyll.
 $ bundle install
 
-# Use the usual Jekyll commands to build or serve the site, but
-# prefix the commands with `bundle exec` to use the bundled
-# dependencies.
+# Use the usual Jekyll commands to build or serve the site.
+# Prefix the commands with `bundle exec` to use the bundled environment.
 $ bundle exec jekyll build
 
 # Update the environment often.
@@ -49,7 +48,7 @@ The `github-pages` gem transitively depends on all gems supported in the GitHub 
 
 List the desired plugins in `_config.yml` under the `plugins` section.
 
-Jekyll allows you to register plugins directly in the Gemfile by placing them under a group called `:jekyll_plugins`, and the official Jekyll docs advise this method. However, the Gemfile is ignored by GitHub Pages, so we must use the `_config.yml` method instead.
+While Jekyll allows you to register plugins in the Gemfile under the `:jekyll_plugins` group, this is not supported by GitHub Pages. We must explicitly list plugins in `_config.yml` to host the site on GitHub.
 
 
 Acknowledgements
