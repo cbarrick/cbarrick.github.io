@@ -22,6 +22,11 @@ html {
 
   line-height: 1.5;
 
+  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+
   @media (max-width: $break-mobile) {
     font-size: 12px;
   }
