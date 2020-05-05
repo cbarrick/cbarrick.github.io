@@ -6,7 +6,7 @@ $break-mobile: 512px;
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,700&display=swap');
 
 
-// Common Elements
+// Sectioning
 // ---------------------------------------------------------------------------
 
 html {
@@ -35,6 +35,43 @@ html {
 body {
   height: 100%;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+
+  nav {
+    margin: 0.25rem;
+  }
+}
+
+main {
+  min-height: 80%;
+  max-width: 50rem;
+  padding: 2rem 4rem;
+  margin: 0 auto;
+
+  @media (max-width: $break-mobile) {
+    padding: 1rem;
+  }
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin: 4rem;
+}
+
+
+// Type
+// ---------------------------------------------------------------------------
 
 h1 {
   font-size: 4rem;
@@ -86,16 +123,6 @@ a {
   }
 }
 
-ul, ol {
-  padding-inline-start: 2.5rem;
-}
-ul { list-style: disc inside; }
-ol { list-style: decimal inside; }
-
-dl {
-  // TODO
-}
-
 blockquote {
   border-left: 4px solid $text-color;
   padding-left: 1rem;
@@ -141,58 +168,28 @@ hr {
   border-bottom: 1px solid $text-color;
 }
 
-svg {
-  height: 100%;
-  width: auto;
-}
 
-figure {
-  text-align: center;
-}
-
-canvas, video, audio, iframe {
-  width: 100%;
-}
-
-meter, progress {
-  width: 100%;
-}
-
-
-// Sectioning
+// Lists
 // ---------------------------------------------------------------------------
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-
-  nav {
-    margin: 0.25rem;
-  }
+// Note that Firefox breaks when `list-style-position` is `indide`
+// and the list contains a block element, e.g. `<p>`.
+// https://bugzilla.mozilla.org/show_bug.cgi?id=36854
+ul, ol {
+  padding-inline-start: 2.5rem;
+  list-style-position: outside;
 }
 
-main {
-  min-height: 80%;
-  max-width: 50rem;
-  padding: 2rem 4rem;
-  margin: 0 auto;
-
-  @media (max-width: $break-mobile) {
-    padding: 1rem;
-  }
+ul {
+  list-style-type: disc;
 }
 
-section {
-  margin-bottom: 2rem;
+ol {
+  list-style-type: decimal;
 }
 
-footer {
-  text-align: center;
-  margin: 4rem;
+dl {
+  // TODO
 }
 
 
@@ -235,13 +232,35 @@ tr:nth-child(odd) {
 }
 
 
+// Media & Widgets
+// ---------------------------------------------------------------------------
+
+svg {
+  height: 100%;
+  width: auto;
+}
+
+figure {
+  text-align: center;
+}
+
+canvas, video, audio, iframe {
+  width: 100%;
+}
+
+meter, progress {
+  width: 100%;
+}
+
+
 // Forms
 // ---------------------------------------------------------------------------
 // TODO
 
 
-// Sectioned Nav
+// Custom Components
 // ---------------------------------------------------------------------------
+
 // A sectioned nav is a <nav> with multiple sections and is drawn with a
 // flexbox table design. It is used for the post archive.
 //
@@ -258,7 +277,6 @@ tr:nth-child(odd) {
 //
 // You only need to add the `sectioned-nav` class to the outer nav. The rest
 // is automatic.
-
 .sectioned-nav {
   section {
     display: flex;
@@ -303,10 +321,6 @@ tr:nth-child(odd) {
     }
   }
 }
-
-
-// Small Components
-// ---------------------------------------------------------------------------
 
 // A list drawn in a single line with '·' as a separator.
 .inline-list {
