@@ -6,3 +6,5 @@ source "https://rubygems.org"
 #
 # For a full list of plugins, see <https://pages.github.com/versions/>.
 gem "github-pages"
+
+gem "webrick", "~> 1.7"
