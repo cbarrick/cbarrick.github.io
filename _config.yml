@@ -35,7 +35,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
 sass:
   style: compressed
 
@@ -84,6 +84,7 @@ collections:
 defaults:
   -
     scope:
+      path: ""
       type: posts
     values:
       permalink: /posts/:year/:month/:day/:title
