@@ -23,6 +23,7 @@ html {
   line-height: 1.5;
 
   scroll-behavior: smooth;
+
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
   }
@@ -91,13 +92,13 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   margin: 1rem 0;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: normal;
   font-style: italic;
   margin: 1rem 0;
@@ -117,7 +118,11 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
-  svg { fill: $link-color; }
+
+  svg {
+    fill: $link-color;
+  }
+
   &:hover {
     text-decoration: underline;
   }
@@ -144,9 +149,14 @@ pre {
   }
 }
 
-code, kbd, samp {
-  padding: 0 0.25rem;
-  color: $base05;
+p {
+
+  code,
+  kbd,
+  samp {
+    padding: 0 0.25rem;
+    color: $base05;
+  }
 }
 
 mark {
@@ -164,7 +174,7 @@ small {
 hr {
   width: 80%;
   margin: 2rem auto;
-  border: none;  // Reset the user-agent.
+  border: none; // Reset the user-agent.
   border-bottom: 1px solid $text-color;
 }
 
@@ -175,7 +185,8 @@ hr {
 // Note that Firefox breaks when `list-style-position` is `indide`
 // and the list contains a block element, e.g. `<p>`.
 // https://bugzilla.mozilla.org/show_bug.cgi?id=36854
-ul, ol {
+ul,
+ol {
   padding-inline-start: 2.5rem;
   list-style-position: outside;
 }
@@ -204,22 +215,34 @@ caption {
   margin: 0.5rem;
 }
 
-thead, tfoot {
+thead,
+tfoot {
   color: $bg-color;
   background-color: $text-color;
 }
 
 thead {
-  &> tr > th:first-child { border-radius: 12px 0 0 0; }
-  &> tr > th:last-child { border-radius: 0 12px 0 0; }
+  &>tr>th:first-child {
+    border-radius: 12px 0 0 0;
+  }
+
+  &>tr>th:last-child {
+    border-radius: 0 12px 0 0;
+  }
 }
 
 tfoot {
-  &> tr > th:first-child { border-radius: 0 0 0 12px; }
-  &> tr > th:last-child { border-radius: 0 0 12px 0; }
+  &>tr>th:first-child {
+    border-radius: 0 0 0 12px;
+  }
+
+  &>tr>th:last-child {
+    border-radius: 0 0 12px 0;
+  }
 }
 
-th, td {
+th,
+td {
   padding: 0.5rem;
 }
 
@@ -244,11 +267,15 @@ figure {
   text-align: center;
 }
 
-canvas, video, audio, iframe {
+canvas,
+video,
+audio,
+iframe {
   width: 100%;
 }
 
-meter, progress {
+meter,
+progress {
   width: 100%;
 }
 
@@ -327,8 +354,10 @@ meter, progress {
   display: inline-flex;
   list-style-type: none;
   padding: 0;
-  &> li {
+
+  &>li {
     display: inline-block;
+
     &:not(:last-child)::after {
       content: '·';
       margin: 0 0.5rem;
@@ -340,11 +369,18 @@ meter, progress {
 .quiet-link {
   text-decoration: none;
   color: $text-color;
-  svg { fill: $text-color; }
+
+  svg {
+    fill: $text-color;
+  }
+
   &:hover {
     text-decoration: none;
     color: $link-color;
-    svg { fill: $link-color; }
+
+    svg {
+      fill: $link-color;
+    }
   }
 }
 
