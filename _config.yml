@@ -7,25 +7,47 @@
 #
 # These variables can be accessed by templates, e.g. ``{{ site.myvariable }}``.
 
-
 ## General metadata
 title: Chris Barrick
 email: cbarrick1@gmail.com
+tagline: Chris Barrick's personal website and blog
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Chris Barrick's personal website and blog
 timezone: America/New_York
 encoding: utf-8
 permalink: /:title
 lang: en-US
-author: csb  # See _data/authors.yml
+license:
+  spdx: CC-BY-SA-4.0
+  url: https://creativecommons.org/licenses/by/4.0/
 
+## Author / SEO metadata
+# <https://jekyll.github.io/jekyll-seo-tag/>
+author:
+  name: Chris Barrick
+  url: https://cbarrick.dev
+  github: cbarrick
+  twitter: cbarrick1024
+webmaster_verifications:
+  google: W4TaAXnMBUryBO_-3cRLRqCHaXuk72rXMbzCOfnOvUI # https://search.google.com/search-console
+github:
+  username: cbarrick
+  url: https://github.com/cbarrick
+twitter:
+  username: cbarrick1024
+  url: https://twitter.com/cbarrick1024
+  card: summary
+social:
+  name: Chris Barrick
+  links:
+    - https://github.com/cbarrick
+    - https://www.linkedin.com/in/csb1024/
+    - https://twitter.com/cbarrick1024
+    - https://www.facebook.com/chris.barrick1024
 
 ## Cannonical URL
 url: "https://cbarrick.dev"
 baseurl: ""
-
 
 ## Build settings
 markdown: kramdown
@@ -39,7 +61,6 @@ kramdown:
 sass:
   style: compressed
 
-
 ## Plugins
 # Github Pages only supports plugins on their whitelist.
 # <https://pages.github.com/versions/>
@@ -48,28 +69,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-
-## SEO
-# Requires the `jekyll-seo-tag` plugin.
-# <https://github.com/jekyll/jekyll-seo-tag>
-social:
-  name: Chris Barrick
-  links:
-    - https://github.com/cbarrick
-    - https://www.linkedin.com/in/csb1024/
-    - https://twitter.com/cbarrick1024
-    - https://www.facebook.com/chris.barrick1024
-twitter:
-  username: cbarrick1024
-  card: summary
-webmaster_verifications:
-  google: W4TaAXnMBUryBO_-3cRLRqCHaXuk72rXMbzCOfnOvUI  # https://search.google.com/search-console
-  # bing: 1234
-  # alexa: 1234
-  # yandex: 1234
-  # baidu: 1234
-
-
 ## Collections
 # Technically, the "posts" collection is setup by default.
 # We reset it here for the sake of being explicit.
@@ -77,13 +76,11 @@ collections:
   posts:
     output: true
 
-
 ## Front matter defaults
 # Set default frontmatter metadata using these rules.
 # <https://jekyllrb.com/docs/configuration/front-matter-defaults/>
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: posts
     values:

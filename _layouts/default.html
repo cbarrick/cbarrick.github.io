@@ -17,8 +17,7 @@
     <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/style.css'>
     <link rel='sitemap' type='application/xml' href='{{ site.baseurl }}/sitemap.css'>
     {% feed_meta %}{% comment %}Adds a <link> for the atom feed.{% endcomment %}
-    <link rel='license' href='https://creativecommons.org/licenses/by/4.0/'>
-    <!-- A link with rel='license' is also set in the footer. Keep these in sync. -->
+    <link rel='license' href='{{ site.license.url }}'>
 
     {% seo title=false %}
   </head>
@@ -33,7 +32,6 @@
         <ul id='nav-list' class='inline-list'>
           <li><a class='quiet-link' href='{{ site.baseurl }}/#about'>About</a></li>
           <li><a class='quiet-link' href='{{ site.baseurl }}/#posts'>Posts</a></li>
-          <li><a class='quiet-link' href='{{ site.baseurl }}/#projects'>Projects</a></li>
         </ul>
       </nav>
 
@@ -41,7 +39,6 @@
         <ul id='nav-list' class='inline-list'>
           <li><a class='quiet-link icon' href='https://www.linkedin.com/in/csb1024/'>{% include icons/linkedin.svg %}</a></li>
           <li><a class='quiet-link icon' href='https://github.com/cbarrick'>{% include icons/github.svg %}</a></li>
-          <!-- <li><a class='quiet-link icon' href='https://twitter.com/cbarrick1024'>{% include icons/twitter.svg %}</a></li> -->
           <li><a class='quiet-link icon' href='{{ site.baseurl }}/feed.xml'>{% include icons/rss.svg %}</a></li>
         </ul>
       </nav>
@@ -56,9 +53,8 @@
         {% assign copydate = page.date | default: site.time %}
         {% assign copydate_iso = copydate | date_to_xmlschema %}
         {% assign copydate_year = copydate | date: '%Y' %}
-        <li><small>&copy; <time datetime='{{ copydate_iso }}'>{{ copydate_year }}</time> {{ site.title }}</small></li>
-        <li><small><a class='quiet-link' rel='license' href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a></small></li>
-        <!-- A link with rel='license' is also set in the head. Keep these in sync. -->
+        <li><small>&copy; <time datetime='{{ copydate_iso }}'>{{ copydate_year }}</time> {{ site.author.name }}</small></li>
+        <li><small><a class='quiet-link' rel='license' href='{{ site.license.url }}'>{{ site.license.spdx | replace: "-", " " }}</a></small></li>
       </ul>
     </footer>
 
