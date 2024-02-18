@@ -18,9 +18,6 @@ $ gem install bundler
 # Use bundler to install the dependencies, including Jekyll.
 $ bundle install
 
-# Add webrick if you need to use jekyll serve
-$ bundle add webrick
-
 # Use the usual Jekyll commands to build or serve the site.
 # Prefix the commands with `bundle exec` to use the bundled environment.
 $ bundle exec jekyll build

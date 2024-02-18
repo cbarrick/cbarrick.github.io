@@ -7,4 +7,6 @@ source "https://rubygems.org"
 # For a full list of plugins, see <https://pages.github.com/versions/>.
 gem "github-pages"
 
+# Allows you to use `jekyll serve`.
+# Not included (or needed) on GitHub Pages.
 gem "webrick", "~> 1.7"
