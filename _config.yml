@@ -51,15 +51,15 @@ social:
   name: Chris Barrick
   links:
     - https://github.com/cbarrick
-    - https://twitter.com/cbarrick1024
     - https://hachyderm.io/@csb
+    - https://www.facebook.com/chris.barrick1024/
+    - https://twitter.com/cbarrick1024
     - https://www.linkedin.com/in/csb1024/
-    - https://www.facebook.com/chris.barrick1024
 webmaster_verifications:
   google: W4TaAXnMBUryBO_-3cRLRqCHaXuk72rXMbzCOfnOvUI # https://search.google.com/search-console
   facebook: jp014ow2qwzugibwm6wgpmer3kj1e3 # https://business.facebook.com/settings
 
-## Cannonical URL
+## Canonical URL
 url: "https://cbarrick.dev"
 baseurl: ""
 
