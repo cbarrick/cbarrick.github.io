@@ -27,23 +27,33 @@ author:
   name: Chris Barrick
   url: https://cbarrick.dev
   github: cbarrick
+  mastodon: "@csb@hachyderm.io"
   twitter: cbarrick1024
-webmaster_verifications:
-  google: W4TaAXnMBUryBO_-3cRLRqCHaXuk72rXMbzCOfnOvUI # https://search.google.com/search-console
+  linkedin: csb1024
 github:
   username: cbarrick
   url: https://github.com/cbarrick
+mastodon:
+  username: "@csb@hachyderm.io"
+  url: https://hachyderm.io/@csb
 twitter:
   username: cbarrick1024
   url: https://twitter.com/cbarrick1024
   card: summary
+linkedin:
+  username: csb1024
+  url: https://www.linkedin.com/in/csb1024/
 social:
   name: Chris Barrick
   links:
     - https://github.com/cbarrick
-    - https://www.linkedin.com/in/csb1024/
     - https://twitter.com/cbarrick1024
+    - https://hachyderm.io/@csb
+    - https://www.linkedin.com/in/csb1024/
     - https://www.facebook.com/chris.barrick1024
+webmaster_verifications:
+  google: W4TaAXnMBUryBO_-3cRLRqCHaXuk72rXMbzCOfnOvUI # https://search.google.com/search-console
+  facebook: jp014ow2qwzugibwm6wgpmer3kj1e3 # https://business.facebook.com/settings
 
 ## Cannonical URL
 url: "https://cbarrick.dev"
