@@ -36,6 +36,10 @@ github:
 mastodon:
   username: "@csb@hachyderm.io"
   url: https://hachyderm.io/@csb
+facebook:
+  username: chris.barrick1024
+  url: https://www.facebook.com/chris.barrick1024/
+  admins: chris.barrick1024 # Not sure if this is the right way to set this
 twitter:
   username: cbarrick1024
   url: https://twitter.com/cbarrick1024
