@@ -1,6 +1,6 @@
 @import 'colors.scss';
 
-$break-mobile: 512px;
+$break-mobile: 768px;
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,700&display=swap');
@@ -17,8 +17,7 @@ html {
   color: $text-color;
 
   font-size: 18px;
-  font-family: Sans-Serif;
-  font-family: Fira Sans, Sans-Serif;
+  font-family: "Fira Sans", Sans-Serif;
 
   line-height: 1.5;
 
@@ -29,7 +28,7 @@ html {
   }
 
   @media (max-width: $break-mobile) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -43,7 +42,7 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem 4rem;
+  padding: 2rem;
   margin: 0 auto;
 
   nav {
@@ -53,12 +52,12 @@ header {
 
 main {
   min-height: 80%;
-  max-width: 50rem;
-  padding: 2rem 4rem;
+  max-width: 48rem;
+  padding: 2rem;
   margin: 0 auto;
 
   @media (max-width: $break-mobile) {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -69,7 +68,7 @@ section {
 footer {
   text-align: center;
   padding: 1rem;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 
@@ -85,6 +84,10 @@ h2 {
   font-size: 3rem;
   font-weight: 300;
   margin: 1rem 0;
+
+  @media (max-width: $break-mobile) {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -118,15 +121,19 @@ p {
 }
 
 a {
-  color: $link-color;
-  text-decoration: none;
+  color: $text-color;
+  text-decoration: underline;
 
   svg {
-    fill: $link-color;
+    fill: $text-color;
   }
 
   &:hover {
-    text-decoration: underline;
+    color: $link-color;
+
+    svg {
+      fill: $link-color;
+    }
   }
 }
 
@@ -154,8 +161,9 @@ pre {
 code,
 kbd,
 samp {
+  color: $base06;
   padding: 0 0.25rem;
-  color: $base05;
+  font-family: 'Fira Code', monospace;
 }
 
 mark {
@@ -180,26 +188,34 @@ hr {
 
 // Lists
 // ---------------------------------------------------------------------------
-
 // Note that Firefox breaks when `list-style-position` is `inside`
 // and the list contains a block element, e.g. `<p>`.
 // https://bugzilla.mozilla.org/show_bug.cgi?id=36854
-ul,
-ol {
-  padding-inline-start: 2.5rem;
-  list-style-position: outside;
-}
 
 ul {
+  margin: 1rem;
+  padding-inline-start: 1.5rem;
+  list-style-position: outside;
   list-style-type: disc;
 }
 
 ol {
+  margin: 1rem;
+  padding-inline-start: 1.5rem;
+  list-style-position: outside;
   list-style-type: decimal;
 }
 
 dl {
-  // TODO
+  margin: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding-inline-start: 1.5rem;
 }
 
 
@@ -208,35 +224,36 @@ dl {
 
 table {
   border-collapse: collapse;
+  margin: 2rem auto;
 }
 
 caption {
   margin: 0.5rem;
 }
 
-thead,
+thead {
+  color: $bg-color;
+  background-color: $text-color;
+
+  &>tr>th:first-child {
+    border-radius: 0.5rem 0 0 0;
+  }
+
+  &>tr>th:last-child {
+    border-radius: 0 0.5rem 0 0;
+  }
+}
+
 tfoot {
   color: $bg-color;
   background-color: $text-color;
-}
 
-thead {
   &>tr>th:first-child {
-    border-radius: 12px 0 0 0;
+    border-radius: 0 0 0 0.5rem;
   }
 
   &>tr>th:last-child {
-    border-radius: 0 12px 0 0;
-  }
-}
-
-tfoot {
-  &>tr>th:first-child {
-    border-radius: 0 0 0 12px;
-  }
-
-  &>tr>th:last-child {
-    border-radius: 0 0 12px 0;
+    border-radius: 0 0 0.5rem 0;
   }
 }
 
@@ -247,10 +264,6 @@ td {
 
 tr:nth-child(even) {
   background-color: darken($bg-color, 10%);
-}
-
-tr:nth-child(odd) {
-  // Don't style odd rows. This effects code blocks with line numbers.
 }
 
 
@@ -282,136 +295,3 @@ progress {
 // Forms
 // ---------------------------------------------------------------------------
 // TODO
-
-
-// Custom Components
-// ---------------------------------------------------------------------------
-
-// A sectioned nav is a <nav> with multiple sections and is drawn with a
-// flexbox table design. It is used for the post archive.
-//
-// - The first child of a sectioned nav should be the nav heading (e.g. <h2>),
-//   and all other children should be <section>s.
-//
-// - Each section should contain two children. The first child should be the
-//   section heading (e.g. <h3>), and the second child should be a <ul> listing
-//   the navigation items.
-//
-// - The navigation items are <li>s with at least one child. The first child
-//   should be the navigation link, and all other children are metadata (e.g.
-//   timestamps) to be drawn in columns to the right.
-//
-// You only need to add the `sectioned-nav` class to the outer nav. The rest
-// is automatic.
-.sectioned-nav {
-  section {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
-    margin-bottom: 0;
-
-    @media (max-width: $break-mobile) {
-      flex-direction: column;
-      margin-bottom: 1rem;
-    }
-
-    &> :first-child {
-      flex: 1;
-      margin: 0;
-      font-size: 1.7rem;
-    }
-  }
-
-  ul {
-    width: 100%;
-    flex: 6;
-    padding: 0;
-  }
-
-  li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    border-bottom: 1px dashed $text-color;
-    padding: 0.5rem 0;
-
-    &> :first-child {
-      flex: 5;
-    }
-
-    &> :not(:first-child) {
-      flex: 1;
-      text-align: right;
-    }
-  }
-}
-
-// A list drawn in a single line with '·' as a separator.
-.inline-list {
-  display: inline-flex;
-  list-style-type: none;
-  padding: 0;
-
-  &>li {
-    display: inline-block;
-
-    &:not(:last-child)::after {
-      content: '·';
-      margin: 0 0.5rem;
-    }
-  }
-}
-
-// A link that is only colored on hover.
-.quiet-link {
-  text-decoration: none;
-  color: $text-color;
-
-  svg {
-    fill: $text-color;
-  }
-
-  &:hover {
-    text-decoration: none;
-    color: $link-color;
-
-    svg {
-      fill: $link-color;
-    }
-  }
-}
-
-// The container around an SVG icon. This should be an `<a>` with a link.
-.icon {
-  fill: $text-color;
-  display: inline-block;
-  vertical-align: text-top;
-  height: 1em;
-}
-
-// Anything that shouldn't be displayed.
-.hidden {
-  display: none;
-}
-
-// Header is stretched to fill the viewport.
-.full-screen {
-  height: 100%;
-  width: 100%;
-  gap: 0;
-
-  h1 {
-    font-size: 4rem;
-  }
-}
-
-// Icon nav is hidden, except on the front page.
-#icon-nav {
-  display: none;
-
-  .full-screen & {
-    display: block;
-  }
-}

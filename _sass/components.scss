@@ -1,0 +1,155 @@
+// Misc
+// ---------------------------------------------------------------------------
+
+// The container around an SVG icon. This should be an `<a>` with a link.
+.icon {
+  fill: $text-color;
+  display: inline-block;
+  vertical-align: text-top;
+  height: 1em;
+}
+
+// Anything that shouldn't be displayed.
+.hidden {
+  display: none;
+}
+
+// A link that is never underlined.
+// It always overrides any other component styling.
+.quiet-link {
+  text-decoration: none !important;
+}
+
+// A link that is never colored or underlined.
+// It always overrides any other component styling.
+.silent-link {
+  color: $text-color !important;
+  text-decoration: none !important;
+}
+
+// Full Screen Header
+// ---------------------------------------------------------------------------
+// Header is stretched to fill the viewport.
+// Applied when pages set the `tall_header` variable to "true".
+
+.full-screen {
+  height: 100%;
+  width: 100%;
+  gap: 0;
+
+  h1 {
+    font-size: 4rem;
+
+    @media (max-width: $break-mobile) {
+      font-size: 3rem; // Prevents the title from wrapping on mobile
+    }
+  }
+}
+
+// The icon nav is hidden by default,
+// unless we're using a full screen header.
+#icon-nav {
+  display: none;
+
+  .full-screen & {
+    display: block;
+  }
+}
+
+// Inline List
+// ---------------------------------------------------------------------------
+// A list drawn in a single line with '·' as a separator.
+
+.inline-list {
+  display: inline-flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &>li {
+    display: inline-block;
+
+    &:not(:last-child)::after {
+      content: '·';
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+// Sectioned Nav
+// ---------------------------------------------------------------------------
+// A sectioned nav is a <nav> with multiple sections and is drawn with a
+// flexbox table design. It is used for the post archive.
+//
+// - The first child of a sectioned nav should be the nav heading (e.g. <h2>),
+//   and all other children should be <section>s.
+//
+// - Each section should contain two children. The first child should be the
+//   section heading (e.g. <h3>), and the second child should be a <ul> listing
+//   the navigation items.
+//
+// - The navigation items are <li>s with at least one child. The first child
+//   should be the navigation link, and all other children are metadata (e.g.
+//   timestamps) to be drawn in columns to the right.
+//
+// You only need to add the `sectioned-nav` class to the outer nav. The rest
+// is automatic.
+
+.sectioned-nav {
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    margin-bottom: 0;
+
+    @media (max-width: $break-mobile) {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    &> :first-child {
+      flex: 1;
+      margin: 0;
+      font-size: 1.7rem;
+    }
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    svg {
+      fill: $link-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    width: 100%;
+    flex: 6;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-bottom: 1px dashed $text-color;
+    padding: 0.5rem 0;
+
+    &> :first-child {
+      flex: 5;
+    }
+
+    &> :not(:first-child) {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

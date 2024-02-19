@@ -10,8 +10,8 @@ layout: compress
 
     <title>{{ page.title }}</title>
 
-    <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/style.css'>
-    <link rel='sitemap' type='application/xml' href='{{ site.baseurl }}/sitemap.css'>
+    <link rel='stylesheet' type='text/css' href='{{ "style.css" | relative_url }}'>
+    <link rel='sitemap' type='application/xml' href='{{ "sitemap.css" | relative_url }}'>
     {% feed_meta %}{% comment %}Adds a <link> for the atom feed.{% endcomment %}
     <link rel='license' href='{{ site.license.url }}'>
 
@@ -21,19 +21,19 @@ layout: compress
   <body>
 
     <header class='{{ page.tall_header | replace: "true", "full-screen" }}'>
-      <h1><a class='quiet-link' href='{{ site.baseurl }}/'>{{ site.title }}</a></h1>
+      <h1><a class='quiet-link' href='{{ "/" | relative_url }}'>{{ site.title }}</a></h1>
       <nav id='main-nav'>
         <h2 class='hidden'>Site Navigation</h2>
-        <ul id='nav-list' class='inline-list'>
-          <li><a class='quiet-link' href='{{ site.baseurl }}/#about'>About</a></li>
-          <li><a class='quiet-link' href='{{ site.baseurl }}/#posts'>Posts</a></li>
+        <ul class='inline-list'>
+          <li><a class='quiet-link' href='{{ "/#about" | relative_url }}'>About</a></li>
+          <li><a class='quiet-link' href='{{ "/#posts" | relative_url }}'>Posts</a></li>
         </ul>
       </nav>
       <nav id='icon-nav'>
-        <ul id='nav-list' class='inline-list'>
+        <ul class='inline-list'>
           <li><a class='quiet-link icon' href='https://www.linkedin.com/in/csb1024/'>{% include icons/linkedin.svg %}</a></li>
           <li><a class='quiet-link icon' href='https://github.com/cbarrick'>{% include icons/github.svg %}</a></li>
-          <li><a class='quiet-link icon' href='{{ site.baseurl }}/feed.xml'>{% include icons/rss.svg %}</a></li>
+          <li><a class='quiet-link icon' href='{{ "feed.xml" | relative_url }}'>{% include icons/rss.svg %}</a></li>
         </ul>
       </nav>
     </header>
@@ -45,9 +45,8 @@ layout: compress
     <footer>
       <ul class='inline-list'>
         {% assign copydate = page.date | default: site.time %}
-        {% assign copydate_iso = copydate | date_to_xmlschema %}
         {% assign copydate_year = copydate | date: '%Y' %}
-        <li><small>&copy; <time datetime='{{ copydate_iso }}'>{{ copydate_year }}</time> {{ site.author.name }}</small></li>
+        <li><small>&copy; <time datetime='{{ copydate_year }}'>{{ copydate_year }}</time> {{ site.author.name }}</small></li>
         <li><small><a class='quiet-link' rel='license' href='{{ site.license.url }}'>{{ site.license.spdx | replace: "-", " " }}</a></small></li>
       </ul>
     </footer>

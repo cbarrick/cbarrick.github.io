@@ -13,7 +13,7 @@ email: cbarrick1@gmail.com
 tagline: Chris Barrick's personal website and blog
 description: >-
   Chris Barrick's personal website and blog
-timezone: America/New_York
+timezone: Etc/UTC
 encoding: utf-8
 permalink: /:title
 lang: en-US
