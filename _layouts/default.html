@@ -1,9 +1,5 @@
 ---
-# The compress layout causes HTML minification.
-# It currently has problems with nested <pre>s which breaks codeblocks when
-# line numbering is enabled.
-# https://github.com/penibelst/jekyll-compress-html/issues/71
-#layout: compress
+layout: compress
 ---
 <!doctype html>
 <html lang='{{ page.lang | default: site.lang }}'>
@@ -26,7 +22,6 @@
 
     <header class='{{ page.tall_header | replace: "true", "full-screen" }}'>
       <h1><a class='quiet-link' href='{{ site.baseurl }}/'>{{ site.title }}</a></h1>
-
       <nav id='main-nav'>
         <h2 class='hidden'>Site Navigation</h2>
         <ul id='nav-list' class='inline-list'>
@@ -34,7 +29,6 @@
           <li><a class='quiet-link' href='{{ site.baseurl }}/#posts'>Posts</a></li>
         </ul>
       </nav>
-
       <nav id='icon-nav'>
         <ul id='nav-list' class='inline-list'>
           <li><a class='quiet-link icon' href='https://www.linkedin.com/in/csb1024/'>{% include icons/linkedin.svg %}</a></li>

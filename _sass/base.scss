@@ -43,7 +43,8 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 4rem;
+  margin: 0 auto;
 
   nav {
     margin: 0.25rem;
@@ -67,7 +68,8 @@ section {
 
 footer {
   text-align: center;
-  margin: 4rem;
+  padding: 1rem;
+  margin: 3rem;
 }
 
 
@@ -75,7 +77,7 @@ footer {
 // ---------------------------------------------------------------------------
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -394,8 +396,22 @@ progress {
   display: none;
 }
 
-// Stretched to fill the viewport.
+// Header is stretched to fill the viewport.
 .full-screen {
   height: 100%;
   width: 100%;
+  gap: 0;
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+// Icon nav is hidden, except on the front page.
+#icon-nav {
+  display: none;
+
+  .full-screen & {
+    display: block;
+  }
 }
