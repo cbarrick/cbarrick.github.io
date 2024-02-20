@@ -58,12 +58,12 @@ some quick bit-twiddling.
 ```c
 cell get_cell(state s, int i) {
     int pos = 2 * i;        // Bit offset of cell i.
-    return (s >> pos) ^ 4;  // Read the cell.
+    return (s >> pos) % 4;  // Read the cell.
 }
 
 void set_cell(state *s, int i, cell val) {
     int pos = 2 * i;    // Bit offset of cell i.
-    *s ^= ~(4 << pos);  // Clear the old value.
+    *s &= ~(3 << pos);  // Clear the old value.
     *s |= val << pos;   // Set the new value.
 }
 ```
