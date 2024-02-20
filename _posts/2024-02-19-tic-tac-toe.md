@@ -22,6 +22,16 @@ which defeats the whole idea behind a compressed representation.
 [^2]: Technically, we need \\(log_2(765) \approx 9.58\\) bits, but there is no
       good way to use that final fraction of a bit.
 
+<figure>
+  <img src='{{ "assets/tic-tac-toe-game.svg" | relative_url }}' alt='A game of tic-tac-toe' width='100%' />
+  <figcaption>
+    A game of tic-tac-toe /
+    © <a href='https://commons.wikimedia.org/wiki/User:Stannered'>User:Stannered</a> /
+    <a href='https://commons.wikimedia.org'>Wikimedia Commons</a> /
+    <a href='https://creativecommons.org/licenses/by-sa/3.0/'>CC-BY-SA-3.0</a>
+  </figcaption>
+</figure>
+
 ### An 18 bit solution
 
 Alejandra came up with a better solution, where each cell is represented by

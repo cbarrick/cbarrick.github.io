@@ -282,7 +282,12 @@ svg {
 }
 
 figure {
+  padding: 1rem;
   text-align: center;
+}
+
+figcaption {
+  font-size: 0.75rem;
 }
 
 canvas,
