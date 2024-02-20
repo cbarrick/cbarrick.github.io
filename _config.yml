@@ -72,6 +72,10 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: false
+  math_engine: mathjax
+  # math_engine_opts:
+  #   tex:
+  #     inlineMath: [["$", "$"], ['\\(', '\\)']]
 sass:
   style: compressed
 

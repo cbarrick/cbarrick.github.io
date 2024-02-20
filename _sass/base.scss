@@ -83,7 +83,6 @@ h1 {
 h2 {
   font-size: 3rem;
   font-weight: 300;
-  margin: 1rem 0;
 
   @media (max-width: $break-mobile) {
     font-size: 2rem;
@@ -93,7 +92,7 @@ h2 {
 h3 {
   font-size: 2rem;
   font-weight: normal;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
 }
 
 h4 {
@@ -152,9 +151,14 @@ pre {
   overflow-x: scroll;
   z-index: 1;
   font-family: 'Fira Code', monospace;
+  font-variant-ligatures: none;
 
   @media (max-width: $break-mobile) {
     font-size: 1rem;
+  }
+
+  code {
+    white-space: pre;
   }
 }
 
@@ -164,6 +168,8 @@ samp {
   color: $base06;
   padding: 0 0.25rem;
   font-family: 'Fira Code', monospace;
+  white-space: nowrap;
+  font-variant-ligatures: none;
 }
 
 mark {

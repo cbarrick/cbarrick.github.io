@@ -27,6 +27,33 @@
   text-decoration: none !important;
 }
 
+// Footnotes
+// ---------------------------------------------------------------------------
+// Kramdown wraps footnotes into a <div class="footnotes">
+// and footnote links in a <a class="footnote">.
+
+.footnote {
+  font-size: 0.75rem;
+}
+
+.footnotes {
+  font-size: 0.75rem;
+  margin-top: 3rem;
+
+  &::before {
+    content: "Footnotes";
+    font-weight: bold;
+  }
+
+  ol {
+    margin: 0.5rem;
+  }
+
+  p {
+    margin: 0.5rem;
+  }
+}
+
 // Full Screen Header
 // ---------------------------------------------------------------------------
 // Header is stretched to fill the viewport.
