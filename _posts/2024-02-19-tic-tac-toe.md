@@ -128,10 +128,10 @@ cell get_cell(state s, int i) {
 }
 
 void set_cell(state *s, int i, cell val) {
-    int div = pow3(i);        // Get the base-3 offset of the cell.
-    int old = (s / div) % 3;  // Read the old value of the cell.
-    *s -= old * div;          // Reset the cell to empty.
-    *s += val * div;          // Set the cell value.
+    int div = pow3(i);         // Get the base-3 offset of the cell.
+    int old = (*s / div) % 3;  // Read the old value of the cell.
+    *s -= old * div;           // Reset the cell to empty.
+    *s += val * div;           // Set the cell value.
 }
 ```
 
