@@ -152,3 +152,7 @@ But if you had some wild application where you needed to keep trillions of game
 states unpacked in memory, then sure, use base-3.
 
 This is a wild case of premature optimization that nobody asked for. 😅
+
+You can find [test cases on GitHub][tests].
+
+[tests]: https://gist.github.com/cbarrick/8c5726dcca7f5f1e436585e672bc7f1f
