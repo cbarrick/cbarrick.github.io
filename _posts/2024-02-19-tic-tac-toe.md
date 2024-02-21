@@ -11,7 +11,7 @@ She arrived at a solution in 18 bits. This got me thinking, can we do better?
 [@blyxyas]: https://tech.lgbt/@blyxyas
 
 As Alejandra points out, there are 765 possible game states[^1]. We could simply
-assign number all of the sates, which would take up 10 bits[^2]. But in
+assign a number to all of the sates, which would take up 10 bits[^2]. But in
 Alejandra's words, that's "boring." More specifically, there's not much we can
 do with a representation like that. Whether we want to read the value of a given
 cell or update from one state to another, in practice we're going to need a
