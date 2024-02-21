@@ -96,7 +96,7 @@ So we can use a base-3 representation to hit our 16 bit target. But how do we
 implement our methods?
 
 The trick is to generalize our bit-twiddling to arbitrary bases. In binary, the
-left-shit operation `x << i` is equivalent to \\(x \cdot 2^i\\), and likewise
+left-shift operation `x << i` is equivalent to \\(x \cdot 2^i\\), and likewise
 the right-shift operation `x >> i` is equivalent to \\(x \div 2^i \\). To
 generalize these operations from base-2 to base-n, just replace 2 with n. For
 the other bitwise operations, we can use a combination of addition and
