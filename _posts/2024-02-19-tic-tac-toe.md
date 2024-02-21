@@ -19,7 +19,7 @@ lookup table to map each number to a larger, more structured representation,
 which defeats the whole idea behind a compressed representation.
 
 [^1]: <https://www.egr.msu.edu/~kdeb/papers/k2007002.pdf>
-[^2]: Technically, we need \\(log_2(765) \approx 9.58\\) bits, but there is no
+[^2]: Technically, we need \\(\log_2(765) \approx 9.58\\) bits, but there is no
       good way to use that final fraction of a bit.
 
 <figure>
@@ -90,7 +90,7 @@ game state as a base-3 number and a cell state as a base-3 digit? In this case
 we need nine base-3 digits, which maxes out at \\(3^9-1\\) or 19,682.
 Representing this in binary will cost us... 15 bits[^3]!
 
-[^3]: Again, we technically only need \\(log_2(3^9) \approx 14.26\\) bits.
+[^3]: Again, we technically only need \\(\log_2(3^9) \approx 14.26\\) bits.
 
 So we can use a base-3 representation to hit our 16 bit target. But how do we
 implement our methods?
