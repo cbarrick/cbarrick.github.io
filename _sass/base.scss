@@ -240,6 +240,9 @@ thead {
   color: $bg-color;
   background-color: $text-color;
 
+  position: sticky;
+  top: 0;
+
   &>tr>th:first-child {
     border-radius: 0.5rem 0 0 0;
   }
