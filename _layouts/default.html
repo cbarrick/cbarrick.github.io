@@ -55,7 +55,7 @@ layout: compress
         {% assign copydate = page.date | default: site.time %}
         {% assign copydate_year = copydate | date: '%Y' %}
         <li><small>&copy; <time datetime='{{ copydate_year }}'>{{ copydate_year }}</time> {{ site.author.name }}</small></li>
-        <li><small><a class='quiet-link' rel='license' href='{{ site.license.url }}'>{{ site.license.spdx | replace: "-", " " }}</a></small></li>
+        <li><small><a class='quiet-link' rel='license' href='{{ site.license.url }}'>{{ site.license.spdx }}</a></small></li>
       </ul>
     </footer>
 

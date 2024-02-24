@@ -19,7 +19,7 @@ permalink: /:title
 lang: en-US
 license:
   spdx: CC-BY-SA-4.0
-  url: https://creativecommons.org/licenses/by/4.0/
+  url: https://creativecommons.org/licenses/by-sa/4.0/
 
 ## Author / SEO metadata
 # <https://jekyll.github.io/jekyll-seo-tag/>
