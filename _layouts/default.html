@@ -15,6 +15,10 @@ layout: compress
 
     <link rel='stylesheet' type='text/css' href='{{ "style.css" | relative_url }}'>
     <link rel='sitemap' type='application/xml' href='{{ "sitemap.css" | relative_url }}'>
+    <link rel='author' href='{{ site.author.url }}'>
+    {% for link in site.social.links %}
+      <link rel='me' href='{{ link }}'>
+    {% endfor %}
     {% feed_meta %}{% comment %}Adds a <link> for the atom feed.{% endcomment %}
     <link rel='license' href='{{ site.license.url }}'>
 
