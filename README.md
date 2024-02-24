@@ -55,7 +55,6 @@ Acknowledgements
 -------------------------
 
 - [minireset.css](https://github.com/jgthms/minireset.css) - Jeremy Thomas - [MIT](https://github.com/jgthms/minireset.css/blob/master/LICENSE)
-- [Material Design icons](http://google.github.io/material-design-icons/) - Google - [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)
 - [Simple Icons](https://simpleicons.org/) - Each icon is a trademark their respective company
 - [Fira Sans & Fira Mono](http://mozilla.github.io/Fira/) - Mozilla - [OFL 1.1](https://github.com/mozilla/Fira/blob/master/LICENSE)
 - [Fira Code](https://github.com/tonsky/FiraCode) - The Fira Code Project Authors - [OFL 1.1](https://github.com/tonsky/FiraCode/blob/master/LICENSE)
