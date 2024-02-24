@@ -7,6 +7,15 @@
   display: inline-block;
   vertical-align: text-top;
   height: 1em;
+  width: 1em;
+
+  &.small {
+    padding: 0.15em; // works because box-sizing: border-box
+  }
+
+  svg {
+    vertical-align: text-top;
+  }
 }
 
 // Anything that shouldn't be displayed.
